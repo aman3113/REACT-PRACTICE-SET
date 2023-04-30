@@ -1,4 +1,4 @@
-export const fakeFetch = (url) => {
+export const fakeFetch1 = (url) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (url === "https://example.com/api/allemails") {
