@@ -16,6 +16,10 @@ import Profile from "./Ans 2/Profile";
 import Ans2 from "./Ans 2/Ans2";
 import AllBooks from "./Ans 2/AllBooks";
 import BooksContextProvider from "./Ans 2/BooksContext";
+import MenuPage from "./Ans 3/MenuPage";
+import CartPage from "./Ans 3/CartPage";
+import Ans3 from "./Ans 3/Ans3";
+import FoodContextProvider from "./Ans 3/FoodContext";
 
 const ErrorElement = () => <div> There is some issue</div>;
 
@@ -39,6 +43,22 @@ const router = createBrowserRouter(
       <Route path="favourite" element={<Favourite />} />
       <Route path="read" element={<ReadBooks />} />
       <Route path="Profile" element={<Profile />} />
+    </Route>,
+    <Route
+      path="/ans3"
+      element={
+        <FoodContextProvider>
+          {" "}
+          <Ans3 />
+        </FoodContextProvider>
+      }
+    >
+      <Route
+        index={true}
+        element={<div>Welcome to Neog Food Restaurant</div>}
+      />
+      <Route path="menu" element={<MenuPage />} />
+      <Route path="cart" element={<CartPage />} />
     </Route>,
   ])
 );
