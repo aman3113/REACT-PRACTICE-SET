@@ -21,6 +21,14 @@ const HomePage = () => {
       >
         Ans-2
       </NavLink>
+      <NavLink
+        className={(isActive) =>
+          isActive ? "text-purple-500" : "text-blue-300"
+        }
+        to={"/ans3"}
+      >
+        Ans-3
+      </NavLink>
     </div>
   );
 };
