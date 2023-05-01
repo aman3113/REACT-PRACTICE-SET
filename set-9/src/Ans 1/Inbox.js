@@ -22,6 +22,12 @@ const Inbox = () => {
     );
   }, [inboxList]);
 
+  const handleClick = (mailId) => {
+    setInboxList((prev) =>
+      prev.map((mail) => (mail.id === mailId ? { ...mail, read: true } : mail))
+    );
+  };
+
   return (
     <div>
       <h2 className="text-center text-xl font-bold">Inbox Page</h2>
@@ -37,6 +43,14 @@ const Inbox = () => {
           >
             {mail.subject}
           </NavLink>
+          {!mail.read && (
+            <button
+              className="border bg-gray-300 rounded-md m-2 px-2 py-1"
+              onClick={() => handleClick(mail.id)}
+            >
+              Mark as Read
+            </button>
+          )}
         </div>
       ))}
     </div>
