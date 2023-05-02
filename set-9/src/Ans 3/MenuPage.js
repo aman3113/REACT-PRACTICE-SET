@@ -48,13 +48,14 @@ const MenuPage = () => {
   return (
     <div>
       <h1 className="text-lg font-bold m-4">Menu</h1>
-      <div>
+      <div className="flex items-center gap-1 ">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleChange}
           placeholder="search food here"
+          className="border p-1 rounded mr-2"
         />
 
         <input
@@ -63,8 +64,11 @@ const MenuPage = () => {
           name="Spicy"
           checked={spicyChecked}
           onChange={() => setSpicyChecked(!spicyChecked)}
+          className="h-4 w-4 "
         />
-        <label for="isSpicy">Spicy</label>
+        <label for="isSpicy" className="mr-2">
+          Spicy
+        </label>
 
         <input
           type="checkbox"
@@ -72,6 +76,7 @@ const MenuPage = () => {
           name="Veg"
           checked={vegChecked}
           onChange={() => setVegChecked(!vegChecked)}
+          className="h-4 w-4"
         />
         <label for="isVeg">Veg</label>
       </div>

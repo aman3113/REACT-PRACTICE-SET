@@ -65,7 +65,7 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <div className=" p-3 border border-red-950">
+    <div className=" p-3">
       <RouterProvider router={router} />
     </div>
   );
