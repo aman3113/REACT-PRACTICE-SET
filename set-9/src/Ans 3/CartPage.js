@@ -6,6 +6,7 @@ const CartPage = () => {
   const { cartItems, setFoodData } = useContext(FoodContext);
   const [deliveryTime, setDeliveryTime] = useState(0);
   const [price, setPrice] = useState(0);
+  const [isCouponApplied, setIsCouponApplied] = useState(false);
 
   useEffect(() => {
     setDeliveryTime(
@@ -32,6 +33,16 @@ const CartPage = () => {
         <span className="font-bold">Total Price:</span> $ {price}
       </p>
 
+      <button
+        onClick={() => {
+          setPrice((prev) => prev - 5);
+          setIsCouponApplied(true);
+        }}
+        disabled={isCouponApplied}
+        className="bg-gray-100 px-2 py-1 border rounded-md my-1 hover:bg-gray-200"
+      >
+        {isCouponApplied ? "Coupon Applied" : "Apply Coupon"}
+      </button>
       <div className="flex gap-x-[40px] gap-y-8 flex-wrap my-3">
         {cartItems?.map((item) => (
           <FoodItem
