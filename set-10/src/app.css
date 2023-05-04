@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  border: 1px solid green;
+  height: 90vh;
+}
+
+.heading {
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Side Bar */
+
+.sidebar {
+  border: 2px solid brown;
+  width: 15%;
+  padding: 50px 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar a {
+  font-size: 20px;
+  color: gray;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  color: red;
+  border-right: 2px solid black;
+}
+
+.route-container {
+  border: 2px solid Pink;
+  width: 85%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Inbox Page */
+
+.background {
+  background-color: aliceblue;
+}
+
+fieldset {
+  padding: 10px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+fieldset input {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+fieldset label {
+  margin-right: 10px;
+}
+
+.unread-mails {
+  margin: 10px 0px;
+}
+
+/* Mail Item */
+
+.mail {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+
+.mail-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.mail-flex button {
+  padding: 3px 5px;
+}
+
+.mail-flex a {
+  color: blue;
+}
+
+.subject {
+  font-weight: bold;
+}
+
+.content {
+  padding: 10px 0;
+}
